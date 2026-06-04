@@ -1,0 +1,16 @@
+--Stores That Never Received a Warranty Claim
+SELECT DISTINCT s.store_id
+FROM warranty w
+INNER JOIN sales s ON w.sales_id = s.sales_id
+WHERE s.store_id IS NOT NULL;
+
+-- Step 2: Test the NOT IN logic before wrapping in COUNT
+SELECT store_id, store_name
+FROM stores
+WHERE store_id NOT IN (
+SELECT DISTINCT s.store_id
+FROM warranty w
+INNER JOIN sales s ON w.sales_id = s.sales_id
+WHERE s.store_id IS NOT NULL
+);
+

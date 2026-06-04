@@ -53,11 +53,11 @@ These tables are linked using primary keys and foreign keys to maintain data int
 
 ## Project Structure
 
-schema.sql – Database schema and table creation scripts
+- schema.sql – Database schema and table creation scripts
 
-business_queries.sql – SQL solutions for business questions
+- business_queries.sql – SQL solutions for business questions
 
-README.md – Project documentation
+- README.md – Project documentation
 
 ## Author
 
